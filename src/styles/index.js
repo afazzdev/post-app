@@ -19,7 +19,7 @@ export const MuiProvider = WrappedComp => {
           // primary: "#fff"
         }
       },
-      fontFamily: `'Open Sans',"Roboto", "Helvetica", "Arial", sans-serif`,
+      fontFamily: `'Montserrat', 'Raleway', 'Open Sans',"Roboto", "Helvetica", "Arial", sans-serif`,
       props: {
         color: {
           background1:
@@ -27,14 +27,18 @@ export const MuiProvider = WrappedComp => {
         },
         polygon: {
           rotb5rem:
-            "polygon(calc(100% - 5rem) 0, 100% calc(0% + 5rem), 100% calc(100% - 5rem), calc(100% - 5rem) 100%, 0 100%, 0 0)"
-        },
-        polygonHalfRem:
-          "polygon(.5rem 0%, calc(100% - .5rem) 0%, 100% calc(0% + .5rem), 100% calc(100% - .5rem), calc(100% - .5rem) 100%, calc(0% + .5rem) 100%, 0% calc(100% - .5rem), 0% calc(0% + .5rem))",
-        polygonHalfRemMinThreePx:
-          "polygon(calc(.5rem - 3px) 0%, calc(100% - calc(.5rem - 3px)) 0%, 100% calc(0% + calc(.5rem - 3px)), 100% calc(100% - calc(.5rem - 3px)), calc(100% - calc(.5rem - 3px)) 100%, calc(0% + calc(.5rem - 3px)) 100%, 0% calc(100% - calc(.5rem - 3px)), 0% calc(0% + calc(.5rem - 3px)))",
-        polygonFourRemLeftOnly:
-          "polygon(calc(0% + 4rem) 0, 100% 0, 100% 100%, calc(0% + 4rem) 100%, 0% calc(100% - 4rem), 0% calc(0% + 4rem))"
+            "polygon(calc(100% - 5rem) 0, 100% calc(0% + 5rem), 100% calc(100% - 5rem), calc(100% - 5rem) 100%, 0 100%, 0 0)",
+          polygonHalfRem:
+            "polygon(.5rem 0%, calc(100% - .5rem) 0%, 100% calc(0% + .5rem), 100% calc(100% - .5rem), calc(100% - .5rem) 100%, calc(0% + .5rem) 100%, 0% calc(100% - .5rem), 0% calc(0% + .5rem))",
+          polygonHalfRemMinThreePx:
+            "polygon(calc(.5rem - 3px) 0%, calc(100% - calc(.5rem - 3px)) 0%, 100% calc(0% + calc(.5rem - 3px)), 100% calc(100% - calc(.5rem - 3px)), calc(100% - calc(.5rem - 3px)) 100%, calc(0% + calc(.5rem - 3px)) 100%, 0% calc(100% - calc(.5rem - 3px)), 0% calc(0% + calc(.5rem - 3px)))",
+          polygonFourRemLeftOnly:
+            "polygon(calc(0% + 4rem) 0, 100% 0, 100% 100%, calc(0% + 4rem) 100%, 0% calc(100% - 4rem), 0% calc(0% + 4rem))",
+          T5:
+            "polygon(1rem 0%, calc(100% - 1rem) 0%, 100% calc(0% + 1rem), 100% calc(100% - 1rem), calc(100% - 1rem) 100%, calc(0% + 1rem) 100%, 0% calc(100% - 1rem), 0% calc(0% + 1rem))",
+          T5m3x:
+            "polygon(calc(1rem - 3px) 0%, calc(100% - calc(1rem - 3px)) 0%, 100% calc(0% + calc(1rem - 3px)), 100% calc(100% - calc(1rem - 3px)), calc(100% - calc(1rem - 3px)) 100%, calc(0% + calc(1rem - 3px)) 100%, 0% calc(100% - calc(1rem - 3px)), 0% calc(0% + calc(1rem - 3px)))"
+        }
       }
     });
 

@@ -118,14 +118,14 @@ class LogicForm extends Component {
           password.length >= 8 &&
           !isNewAccount;
 
-        console.log(
-          "login",
-          login,
-          "register",
-          register,
-          "ismatched",
-          isMatched
-        );
+        // console.log(
+        //   "login",
+        //   login,
+        //   "register",
+        //   register,
+        //   "ismatched",
+        //   isMatched
+        // );
         if (register || login) {
           return {
             values: {
@@ -178,7 +178,7 @@ class LogicForm extends Component {
             }
           },
           () => {
-            console.log("state from logic", this.state);
+            // console.log("state from logic", this.state);
           }
         );
 
@@ -260,8 +260,8 @@ class LogicForm extends Component {
                 },
                 isNewAccount: !prevState.isNewAccount
               };
-            },
-            () => console.log(res)
+            }
+            // () => console.log(res)
           )
         )
         .catch(err =>
@@ -270,8 +270,8 @@ class LogicForm extends Component {
               return {
                 values: { ...prevState.values, disabled: !prevState.disabled }
               };
-            },
-            () => console.log(err)
+            }
+            // () => console.log(err)
           )
         );
     } else if (name === "login") {
@@ -291,8 +291,8 @@ class LogicForm extends Component {
                   disabled: !prevState.disabled
                 }
               };
-            },
-            () => console.log(res)
+            }
+            // () => console.log(res)
           );
           this.props.history.push("/dashboard");
         })
@@ -302,8 +302,8 @@ class LogicForm extends Component {
               return {
                 values: { ...prevState.values, disabled: !prevState.disabled }
               };
-            },
-            () => console.log(err)
+            }
+            // () => console.log(err)
           )
         );
     }

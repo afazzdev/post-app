@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 
+import DashboardComp from "../../components/Dashboard/DashboardComp";
+import DashboardLogic from "./DashboardLogic";
+
 class Dashboard extends Component {
   render() {
     return (
       <>
-        <div>This is dashboard</div>
-        <button
-          onClick={() => {
-            localStorage.removeItem("token");
-            this.props.history.push("/");
-          }}
-        >
-          LogOut
-        </button>
+        <DashboardLogic
+          render={(state, logOut, handelRoute, handleSubRoute) => (
+            <DashboardComp
+              state={state}
+              logOut={logOut}
+              handelRoute={handelRoute}
+              handleSubRoute={handleSubRoute}
+            />
+          )}
+        />
       </>
     );
   }

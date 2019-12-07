@@ -16,7 +16,7 @@ import { Visibility, VisibilityOff } from "@material-ui/icons";
 const OutlinedInputEdit = withStyles(theme => ({
   root: {
     background: "white",
-    clipPath: theme.props.polygon
+    clipPath: theme.props.polygon.polygonHalfRem
   }
 }))(OutlinedInput);
 

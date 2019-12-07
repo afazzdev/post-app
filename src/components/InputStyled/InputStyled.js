@@ -15,10 +15,10 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3)
   },
   textField: {
-    //  clipPath: theme.props.polygon,
+    //  clipPath: theme.props.polygon.polygon,
   },
   cuttedEdge: {
-    clipPath: theme.props.polygon,
+    clipPath: theme.props.polygon.polygonHalfRem,
     padding: "1px",
     background: theme.palette.grey.A100
   },
@@ -33,14 +33,14 @@ const useStyles = makeStyles(theme => ({
   labelBorder: {
     background: theme.palette.primary.main,
     padding: "3px",
-    clipPath: theme.props.polygonHalfRem,
+    clipPath: theme.props.polygon.T5,
     margin: "3rem"
   }
 }));
 
 const PaperEdit = withStyles(theme => ({
   root: {
-    clipPath: theme.props.polygonHalfRemMinThreePx,
+    clipPath: theme.props.polygon.T5m3x,
     background: theme.palette.common.white
   }
 }))(Paper);

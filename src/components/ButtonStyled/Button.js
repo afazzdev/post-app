@@ -9,13 +9,13 @@ const useStyle = makeStyles(theme => ({
     margin: "2rem .5rem",
     padding: "3px",
     background: theme.palette.grey[300],
-    clipPath: theme.props.polygonHalfRem
+    clipPath: theme.props.polygon.polygonHalfRem
   }
 }));
 
 const Styled = withStyles(theme => ({
   root: {
-    clipPath: theme.props.polygonHalfRemMinThreePx
+    clipPath: theme.props.polygon.polygonHalfRemMinThreePx
     // margin: "0 .5rem",
   },
   containedPrimary: {

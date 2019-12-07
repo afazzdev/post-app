@@ -6,11 +6,11 @@ class Auth extends Component {
   render() {
     return (
       <Fragment>
-        {localStorage.getItem("token") ? (
+        {/* {localStorage.getItem("token") ? (
           this.props.history.push("/dashboard")
-        ) : (
-          <AuthComp />
-        )}
+        ) : ( */}
+        <AuthComp />
+        {/* )} */}
       </Fragment>
     );
   }

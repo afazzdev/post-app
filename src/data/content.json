@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "tabName": "dashboard",
+      "sidebar": [
+        {
+          "tabName": "penjualan",
+          "content": "penjualan"
+        },
+        {
+          "tabName": "pembelian",
+          "content": "pembelian"
+        },
+        {
+          "tabName": "grafik",
+          "content": "grafik"
+        }
+      ]
+    },
+    {
+      "tabName": "supplier",
+      "sidebar": [
+        {
+          "tabName": "tambah barang",
+          "content": "tambah barang"
+        },
+        {
+          "tabName": "data barang",
+          "content": "data barang"
+        },
+        {
+          "tabName": "tambah supplier",
+          "content": "tambah supplier"
+        },
+        {
+          "tabName": "data supplier",
+          "content": "data supplier"
+        }
+      ]
+    },
+    {
+      "tabName": "sales",
+      "sidebar": [
+        {
+          "tabName": "tambah suplier",
+          "content": "tambah adad"
+        },
+        {
+          "tabName": "data adad",
+          "content": "data adad"
+        },
+        {
+          "tabName": "tambah suppladdier",
+          "content": "tambah supplier"
+        },
+        {
+          "tabName": "data adsd",
+          "content": "data supplier"
+        }
+      ]
+    },
+    {
+      "tabName": "setting",
+      "sidebar": [
+        {
+          "tabName": "profile",
+          "content": "profile"
+        },
+        {
+          "tabName": "admin setting",
+          "content": "admin setting"
+        }
+      ]
+    }
+  ]
+}
