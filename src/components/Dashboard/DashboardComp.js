@@ -16,7 +16,7 @@ const DashboardComp = ({ state, logOut, handelRoute, handleSubRoute }) => {
       <StickyNavbar state={state} handelRoute={handelRoute}>
         <CostumizedTabs
           index={state.currentRouteIndex}
-          MapData={state.data}
+          mapData={state.data}
           changeRoute={handelRoute}
         />
       </StickyNavbar>

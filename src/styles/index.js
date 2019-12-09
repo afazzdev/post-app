@@ -39,6 +39,27 @@ export const MuiProvider = WrappedComp => {
           T5m3x:
             "polygon(calc(1rem - 3px) 0%, calc(100% - calc(1rem - 3px)) 0%, 100% calc(0% + calc(1rem - 3px)), 100% calc(100% - calc(1rem - 3px)), calc(100% - calc(1rem - 3px)) 100%, calc(0% + calc(1rem - 3px)) 100%, 0% calc(100% - calc(1rem - 3px)), 0% calc(0% + calc(1rem - 3px)))"
         }
+      },
+      typography: {
+        fontFamily: [
+          "Montserrat",
+          "Raleway",
+          "Open Sans",
+          "Roboto",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          '"Segoe UI"',
+          "Roboto",
+          '"Helvetica Neue"',
+          "Arial",
+          "sans-serif",
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"'
+        ].join(",")
       }
     });
 

@@ -1,15 +1,16 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Hidden } from "@material-ui/core";
 
-import BaseContentGrid from "../Grid/BaseContentGrid";
-import CosTab from "../Tabs/CustomizedTabs";
+import LeftContent from "./LeftContent";
+import RightContent from "./RightContent";
 
 const useStyles = makeStyles(theme => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    height: "1000px"
+    margin: "3rem 0"
   },
   rootLeft: {
     flexGrow: 1,
@@ -25,43 +26,30 @@ export default function Content({
 }) {
   const classes = useStyles();
 
-  const Left = () => {
-    return (
-      <>
-        <div className={classes.rootLeft}>
-          <CosTab
-            orientation="vertical"
-            index={currentSubRouteIndex}
-            MapData={data[currentRouteIndex].sidebar}
-            changeRoute={handleSubRoute}
-            style={{
-              color: "black"
-            }}
-          />
-        </div>
-      </>
-    );
-  };
-
-  const Right = () => {
-    return (
-      <>
-        {data &&
-          data[currentRouteIndex].sidebar[currentSubRouteIndex].content && (
-            <div>
-              {data[currentRouteIndex].sidebar[currentSubRouteIndex].content}
-            </div>
-          )}
-      </>
-    );
-  };
-
-  const BaseContent = BaseContentGrid(Left, Right);
-
   return (
     <>
       <main className={classes.content}>
-        <BaseContent />
+        <Grid container>
+          <Grid item xs sm={3} style={{ position: "relative" }}>
+            <LeftContent
+              classes={classes}
+              index={currentSubRouteIndex}
+              mapData={data[currentRouteIndex].sidebar}
+              changeRoute={handleSubRoute}
+            />
+          </Grid>
+          <Hidden only="xs">
+            <Grid item sm={9}>
+              <RightContent
+                mainId={currentRouteIndex}
+                subId={currentSubRouteIndex}
+                dataName={
+                  data[currentRouteIndex].sidebar[currentSubRouteIndex].content
+                }
+              />
+            </Grid>
+          </Hidden>
+        </Grid>
       </main>
     </>
   );

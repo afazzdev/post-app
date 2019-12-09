@@ -9,12 +9,9 @@ class DashboardLogic extends Component {
     this.state = {
       token: "",
       api: "https://peaceful-savannah-85788.herokuapp.com",
-      data: {
-        image: ""
-      },
+      data: [],
       height: false,
       hidden: true,
-      tabs: ["Dashboard", "Supplier", "Setting"],
       currentRoute: "/dashboard",
       currentRouteIndex: 0,
       currentSubRoute: "",
@@ -45,19 +42,36 @@ class DashboardLogic extends Component {
   };
 
   isSameRoute = () => {
-    const { tabs, currentRoute } = this.state;
-    tabs.forEach((tab, index) => {
+    const { data, currentRoute } = this.state;
+
+    data.forEach((tab, index) => {
       if (
-        currentRoute === tab.toLowerCase() ||
-        currentRoute === `/dashboard/${tab.toLowerCase()}`
+        currentRoute === tab.tabName.toLowerCase() ||
+        currentRoute === `/dashboard/${tab.tabName.toLowerCase()}`
       ) {
-        return this.setState({
-          currentRouteIndex: index,
-          currentSubRouteIndex: 0
-        });
+        return this.setState(
+          {
+            currentRouteIndex: index,
+            currentSubRouteIndex: 0
+          },
+          () => console.log("is same route", this.state)
+        );
       }
       return null;
     });
+  };
+
+  handleSubRoute = (name, index) => {
+    const { currentRoute, currentSubRoute } = this.state;
+
+    this.setState(
+      { currentSubRoute: name, currentSubRouteIndex: index },
+      () => {
+        console.log("currentSubRoute", currentSubRoute, name);
+
+        this.props.history.push(`${currentRoute}`);
+      }
+    );
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -76,7 +90,7 @@ class DashboardLogic extends Component {
 
   handleChangeScroll = () => {
     this.setState(prevState => {
-      if (window.scrollY > 80 && prevState.height === this.state.height) {
+      if (window.scrollY > 64 && prevState.height === this.state.height) {
         return { hidden: false, height: true };
       } else {
         setTimeout(() => {
@@ -94,17 +108,10 @@ class DashboardLogic extends Component {
     this.isSameRoute();
     // ^untuk mengecek indicator tabs
 
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   componentWillUnmount() {}
-
-  handleSubRoute = (name, index) => {
-    this.setState({ currentSubRoute: name, currentSubRouteIndex: index }, () =>
-      console.log("currentSubRoute", this.state.currentSubRoute, name)
-    );
-    // console.log(name);
-  };
 
   // // componentDidMount() {
   //   const { api, token } = this.state;

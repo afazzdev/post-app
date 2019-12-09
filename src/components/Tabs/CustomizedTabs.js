@@ -5,13 +5,16 @@ import Tab from "@material-ui/core/Tab";
 
 const AntTabs = withStyles({
   root: {
-    alignSelf: "flex-end"
+    // alignSelf: "flex-end"
   },
   indicator: {
     backgroundColor: "#fff",
     height: "5px",
     clipPath:
       "polygon(calc(100% - 2.5px) 0, 100% calc(0% + 2.5px), 100% 100%, 0 100%, 0 calc(0% + 2.5px), calc(0% + 2.5px) 0)"
+  },
+  flexContainer: {
+    alignItems: "flex-start"
   }
 })(Tabs);
 
@@ -49,7 +52,7 @@ const AntTab = withStyles(theme => ({
   selected: {}
 }))(props => <Tab disableRipple {...props} />);
 
-const CustomizedTabs = ({ index, MapData, changeRoute, ...rest }) => {
+const CustomizedTabs = ({ index, mapData, changeRoute, ...rest }) => {
   return (
     <>
       <AntTabs
@@ -58,8 +61,8 @@ const CustomizedTabs = ({ index, MapData, changeRoute, ...rest }) => {
         aria-label="ant example"
         {...rest}
       >
-        {MapData &&
-          MapData.map((data, i) => (
+        {mapData &&
+          mapData.map((data, i) => (
             <AntTab
               key={data.tabName}
               label={data.tabName}

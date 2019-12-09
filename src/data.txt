@@ -1,0 +1,1 @@
+setting cashier : username, photo, password, email, phone

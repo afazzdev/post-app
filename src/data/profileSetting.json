@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "name": "username",
+      "desc": "for change ur username",
+      "type": "text"
+    },
+    {
+      "name": "email",
+      "desc": "for change ur email",
+      "type": "text"
+    },
+    {
+      "name": "phone",
+      "desc": "for change ur phone",
+      "type": "number"
+    },
+    {
+      "name": "password",
+      "desc": "for change ur password",
+      "type": "text"
+    },
+    {
+      "name": "photo",
+      "desc": "for change ur photo",
+      "type": "file"
+    }
+  ]
+}
